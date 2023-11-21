@@ -1,0 +1,82 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block register %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center; /* Đảm bảo các thành phần được căn giữa theo chiều dọc */
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 10px; /* Khoảng cách giữa hình ảnh và chữ */
+        }
+
+        h2 {
+            margin: 0; /* Loại bỏ margin mặc định của thẻ h2 */
+        }
+
+        .thanks-section {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Giới thiệu về nhóm</h1> <br>
+
+    <div class="team-member">
+        <img src="{% static 'images/c1.avif' %}" alt="Thành viên 1" width="50" height="50">
+        <h3>Nguyễn Mạnh Hùng</h3>
+    </div>
+
+    <div class="team-member">
+        <img src="{% static 'images/c2.avif' %}" alt="Thành viên 1" width="50" height="50">
+        <h3>Nguyễn Minh Hồng</h3>
+    </div>
+    
+    <div class="team-member">
+        <img src="{% static 'images/c3.jpg' %}" alt="Thành viên 1" width="50" height="50">
+        <h3>Hoàng Minh Khương</h3>
+    </div>
+
+    <div class="team-member">
+        <img src="{% static 'images/c4.jpg' %}" alt="Thành viên 1" width="50" height="50">
+        <h3>Nguyễn Mạnh Hùng</h3>
+    </div>
+
+    <div class="team-member">
+        <img src="{% static 'images/c5.avif' %}" alt="Thành viên 1" width="50" height="50">
+        <h3>Nguyễn Văn Minh</h3>
+    </div>
+    <!-- Thêm các thành viên khác tương tự -->
+
+    <div class="thanks-section">
+        <h2>Lời cảm ơn đến giảng viên</h2>
+        <p>
+            Chúng tôi xin chân thành cảm ơn sự hướng dẫn và sự hỗ trợ nhiệt tình của giảng viên trong suốt thời gian học phần. 
+            Điều này đã giúp chúng tôi phát triển kỹ năng và hiểu biết của mình rất nhiều. 
+            Xin chân thành cảm ơn!
+        </p>
+    </div>
+
+</body>
+</html>
+
+{% endblock register%}

@@ -1,0 +1,92 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block banner_slider %}
+<div class='banner-home'>
+  <img src="static/images/1.jpg" class="d-block" width="100%" alt="...">
+  <br>
+</div>
+
+<style>
+  .under-banner-home {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: rgba(51, 51, 51, 0.7); /* Màu chữ mờ */
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.5;
+  }
+  /* Container Styles */
+  body {
+      text-align: center;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Button Styles */
+  .view-all-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      border: 2px solid #000;
+      border-radius: 5px;
+      transition: color 0.3s;
+  }
+
+  .view-all-btn:hover {
+      color: rgba(0, 0, 0, 0.8); /* Màu chữ mờ hơn */
+  }
+
+  body {
+      text-align: center;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Image Styles */
+  .resized-image {
+      width: 80%; /* Đặt chiều rộng của ảnh là 80% */
+      height: auto; /* Duy trì tỷ lệ khung hình */
+      display: block; /* Để tránh khoảng trắng dư thừa ở dưới ảnh */
+      margin: 0 auto; /* Canh giữa ảnh */
+  }
+</style>
+
+<div class="under-banner-home">
+  Chọn đồ nội thất - Nhớ đến PTIT
+</div> <br>
+
+<img src="static/images/1.webp" class="resized-image" alt="Best Seller"> <br>
+{% endblock banner_slider %}
+
+{% block main-content %}
+<div class="">
+  <div class="row">
+    {% for product in product_arr%}
+    <div class="col-lg-3">
+        <img class="thumbnail" src="{{product.ImageURL}}" alt="">
+        <div class="box-element product">
+            <h6><strong>{{ product.name }}</strong></h6>
+            <hr>
+
+            <button data-product= {{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Thêm Vào Giỏ Hàng</button>
+            <a class="btn btn-outline-success" href="{% url 'detail' %}?id={{product.id}}">Xem</a>    
+            <h3 style="display: inline-block; float: right;"> <strong>${{product.price | floatformat:2}}</strong></h3>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<br><br><br>
+<br><br><br>
+{% endblock main-content %}

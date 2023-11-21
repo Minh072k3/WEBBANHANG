@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    {% block category %}
+        <div class="">
+            <div class="row">
+              {% for product in products%}
+              <div class="col-lg-3">
+                  <img class="thumbnail" src="{{product.ImageURL}}" alt="">
+                  <div class="box-element product">
+                      <h6><strong>{{ product.name }}</strong></h6>
+                      <hr>
+          
+                      <button data-product= {{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Thêm Vào Giỏ Hàng</button>
+                      <a class="btn btn-outline-success" href="#">Xem</a>    
+                      <h3 style="display: inline-block; float: right;"> <strong>${{product.price | floatformat:2}}</strong></h3>
+          
+                  </div>
+              </div>
+            {% endfor %}
+        </div>
+    
+    {% endblock category %}
+</body>
+</html>

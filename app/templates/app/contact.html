@@ -1,0 +1,77 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block register %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% block conect %}   
+        <section class="vh-100 bg-image"
+          style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+          <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                  <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                      
+                        
+                      <div class="row g-0 ">
+                        <div class="col-xl-6 d-none d-xl-block">
+                          <img src="{% static 'app/images/phone.jpg'%}"
+                            alt="Sample photo" class="img-fluid"
+                            style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                          
+                          <div class="form-outline mb-4">
+                            <h3>Admin</h3><br/>
+                            <a><strong>Họ và Tên</strong>: Nguyễn Minh Hồng</a><br/>
+                            <a><strong>Sdt</strong>: 032155521</a><br/>
+                            <a><strong>Email</strong>: ppk123@gmail.com</a><br/>
+                          </div>
+                          <div class="form-outline mb-4 ">
+                            
+                            <a><strong>Họ và Tên</strong>: Nguyễn Mạnh Hùng</a><br/>
+                            <a><strong>Sdt</strong>: 0988765567</a><br/>
+                            <a><strong>Email</strong>: sdf123@gmail.com</a><br/>
+                          </div>
+                          <div class="form-outline mb-4 ">
+                            
+                            <a><strong>Họ và Tên</strong>: Hoàng Minh Khương</a><br/>
+                            <a><strong>Sdt</strong>: 09001008</a><br/>
+                            <a><strong>Email</strong>: xcv123@gmail.com</a><br/>
+                          </div>
+                          <div class="form-outline mb-4 ">
+                            
+                            <a><strong>Họ và Tên</strong>: Nguyễn Mạnh Hùng</a><br/>
+                            <a><strong>Sdt</strong>: 0986541222</a><br/>
+                            <a><strong>Email</strong>: hung123@gmail.com</a><br/>
+                          </div>
+                          <div class="form-outline mb-4 ">
+                            
+                            <a><strong>Họ và Tên</strong>: Nguyễn Văn Minh</a><br/>
+                            <a><strong>Sdt</strong>: 81231233</a><br/>
+                            <a><strong>Email</strong>: sdf123@gmail.com</a><br/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {% endblock conect %}
+    </body>
+</html>
+
+{% endblock register%}
